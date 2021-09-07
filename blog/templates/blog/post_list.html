@@ -21,29 +21,14 @@
                 </nav>
             </header>
 
-            <div id="artigos">
-
-                <article class="artigo">
-                    <h2>Com Gavião Arqueiro, Marvel's Avengers chega a PS5 e Xbox Series em 18 de março</h2>
-                    <p>Na mesma data, também chega Gavião Arqueiro, novo herói do game. O personagem chega junto a um novo arco de história chamado “Operação Gavião Arqueiro - Futuro Imperfeito”, que mostrará o encontro entre o Clint Barton do presente com uma versão envelhecida, de um futuro no qual os heróis da Terra morreram em uma guerra nuclear.
-                    </p>                        
-                </article>
-                <article class="artigo">
-                    <h2>Com Gavião Arqueiro, Marvel's Avengers chega a PS5 e Xbox Series em 18 de março</h2>
-                    <p>Na mesma data, também chega Gavião Arqueiro, novo herói do game. O personagem chega junto a um novo arco de história chamado “Operação Gavião Arqueiro - Futuro Imperfeito”, que mostrará o encontro entre o Clint Barton do presente com uma versão envelhecida, de um futuro no qual os heróis da Terra morreram em uma guerra nuclear.
-                    </p>                        
-                </article>
-                <article class="artigo">
-                    <h2>Com Gavião Arqueiro, Marvel's Avengers chega a PS5 e Xbox Series em 18 de março</h2>
-                    <p>Na mesma data, também chega Gavião Arqueiro, novo herói do game. O personagem chega junto a um novo arco de história chamado “Operação Gavião Arqueiro - Futuro Imperfeito”, que mostrará o encontro entre o Clint Barton do presente com uma versão envelhecida, de um futuro no qual os heróis da Terra morreram em uma guerra nuclear.
-                    </p>                        
-                </article>
-                <article class="artigo">
-                    <h2>Com Gavião Arqueiro, Marvel's Avengers chega a PS5 e Xbox Series em 18 de março</h2>
-                    <p>Na mesma data, também chega Gavião Arqueiro, novo herói do game. O personagem chega junto a um novo arco de história chamado “Operação Gavião Arqueiro - Futuro Imperfeito”, que mostrará o encontro entre o Clint Barton do presente com uma versão envelhecida, de um futuro no qual os heróis da Terra morreram em uma guerra nuclear.
-                    </p>                        
-                </article>                                
+            {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <h4>{{ post.author }}</h4>
+                <p>{{ post.text|linebreaksbr }}</p>
             </div>
+            {% endfor %}
             
 
 
