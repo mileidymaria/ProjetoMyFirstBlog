@@ -4,12 +4,13 @@
         <meta charset="utf-8">
         <title>Projeto</title>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     </head>
 
     <body>
         <div id="container">
             <header>
-                <img src="imagens/logo-marvel.png">
+                <img src="{% static "imagem/logo-marvel.png" %}">
                 <nav>
                     <ul>
                         <li><a href="#">Home</a></li>
@@ -22,7 +23,7 @@
             </header>
 
             {% for post in posts %}
-            <div>
+            <div id="postagens">
                 <p>published: {{ post.published_date }}</p>
                 <h2><a href="">{{ post.title }}</a></h2>
                 <h4>Autor: {{ post.author }}</h4>
